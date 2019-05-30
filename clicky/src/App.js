@@ -84,7 +84,7 @@ class App extends Component {
         <PageTitleCard>React Memory Game! Score:{this.score}</PageTitleCard>
         <h2 style={introStyle} className="title">
           Fast Cast Memory Game. Try and remember Which member of the team
-          you'vd clicked, if you guess the same person again, Back to zero you
+          you've clicked, if you guess the same person again, Back to zero you
           go!
         </h2>
         <div id="shake">
