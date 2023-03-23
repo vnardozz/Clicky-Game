@@ -8,7 +8,7 @@ import PageTitleCard from "./components/pageTitleCard/PageTitle";
 
 const introStyle = {
   textAlign: "center",
-  fontFamily: "Sirin Stencil, cursive"
+  fontFamily: "Maiden Orange, cursive"
 };
 
 class App extends Component {
@@ -19,7 +19,6 @@ class App extends Component {
   score = 0;
 
   Clicked = id => {
-    console.log(friends);
     const friends = this.state.friends.map(friend => {
       if (friend.id === id) {
         if (friend.clicked === false) {
@@ -28,7 +27,6 @@ class App extends Component {
           this.score++;
         } else {
           alert("Oops! Try again.");
-          console.log(friends);
           document.getElementById("shake").classList.add("uk-animation-shake");
           setTimeout(function() {
             document
@@ -81,7 +79,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <PageTitleCard>React Memory Game! Score:{this.score}</PageTitleCard>
+        <PageTitleCard>React Memory Game!</PageTitleCard>
+        <h1>Score:{this.score}</h1>
         <h2 style={introStyle} className="title">
           Fast Cast Memory Game. Try and remember Which member of the team
           you've clicked, if you guess the same person again, Back to zero you
